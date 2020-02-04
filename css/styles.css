@@ -3,12 +3,24 @@ body {
   color: black;
 	background: white;
   font-size: 16px;
-  font-family: 'Comfortaa', Arial, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 300;
   line-height: normal;
   padding: 0;
   margin: 0;
   display: block;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  transition: 0.2s;
+}
+
+a:hover {
+  opacity: 0.5;
 }
 
 /* Headers styles (nav, top things) */
@@ -17,7 +29,7 @@ body {
   max-width: 100%;
   height: 50px;
   margin: auto;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0);
 }
 
 nav {
@@ -27,29 +39,48 @@ nav {
   font-weight: bold;
 }
 
-nav .home a {
+.home a {
   padding: 7px;
   float: left;
+  filter: drop-shadow(1px 1px 1px black);
+  transition: 0.2s;
+}
+
+.home a:hover {
+  opacity: 1;
+  filter: drop-shadow(2px 2px 3px black);
+  background-color: white;
 }
 
 nav .links {
+  color: white;
   float: right;
+  transition: 0.2s;
 }
 
 nav .links .link-area a {
   display: inline-block;
-  color: black;
+  color: white;
   text-decoration: none;
   padding: 16px 16px;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 nav .links a.icon {
   display: none;
 }
 
-nav a:hover {
-  background: white;
+.links a {
+  font-weight: 100;
+  transition: 0.2s;
+}
+
+.links a:hover {
+  /* font-size: 2em; */
+  opacity: 1;
+  font-weight: 500;
+  background-color: #198ACC;
+  filter: drop-shadow(2px 2px 3px black);
 }
 
 main {
@@ -90,7 +121,7 @@ footer {
   overflow: hidden;
 }
 
-#heroVideo {
+.heroFill {
   position: absolute;
   top: 0;
   left: 0;
@@ -100,6 +131,34 @@ footer {
   height: calc(105vh);
 }
 
+.heroAnchor {
+  position: absolute;
+  bottom: 200px;
+  left: 10%;
+  text-transform: uppercase;
+  color:white;
+  font-size: 2em;
+  font-weight: 100;
+  padding: 1em;
+}
+
+.heroAnchor h1 {
+  font-weight: 100;
+}
+
+.heroAnchor a {
+  color: white;
+  background-color: #198ACC;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.blue {
+  color: #198ACC;
+  background-color: white;
+  padding: 0 10px;
+  font-weight: 800;
+}
 
 .clear {
 	clear:both;
@@ -156,7 +215,7 @@ footer {
   bottom: 0px;
   padding: 10px;
   width: 70%;
-  border-radius: 0 100px 100px 0;
+  /* border-radius: 0 100px 100px 0; */
   background-color: rgba(255,255,255,0.8);
 }
 
@@ -185,7 +244,7 @@ footer {
 .team-member-photo img {
   width: 100%;
   height: 300px;
-  border-radius: 15px;
+  /* border-radius: 15px; */
   object-fit: cover;
 }
 
@@ -219,12 +278,8 @@ footer {
   color: black;
   background-color: white;
   padding: 16px 32px;
-  border-radius: 100px;
+  /* border-radius: 100px; */
   transition: 0.3s;
-}
-
-a:hover {
-  opacity: 0.5;
 }
 
 .faded > * {
@@ -259,6 +314,10 @@ a:hover {
  /* Mobile + Tablet */
  @media only screen and (max-width: 1159px) {
 
+  .heroAnchor {
+    font-size: 1em;
+  }
+
   .squeeze {
     margin: auto 1em;
   }
@@ -269,38 +328,48 @@ a:hover {
   }
 
   .nav .links .link-area a {
-		display:none;
+    display:none;
   }
   
   .nav .links a.icon {
     display: block;
-    font-size: 18px;
+    font-size: 30px;
     float: right;
-    color: black;
+    color: white;
     text-decoration: none;
-    padding: 13px 16px;
-    transition: 0.5s;
+    padding: 4px 16px;
+    transition: 0.2s;
   }
 
   .nav.open {
-    z-index: 2;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+  }
+
+  .nav .links .link-area {
+    opacity: 0;
+    transition: 0.2s;
   }
   
   .nav.open .links .link-area {
+    opacity: 1;
+    height: 0;
     z-index: 2;
     display: block;
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: calc(100% - 50px);
     top: 50px;
     left: 0;
     background-size: cover;
     background-image: url("../media/images/team-1.jpg"); 
+    transition: 0.5s;
 	}
 
 	.nav.open .links .link-area a {
     font-size: 2em;
-    font-weight: bolder;
     color: white;
     background-color: black;
     opacity: 0.7;
@@ -316,9 +385,15 @@ a:hover {
   }
   
   .nav.open a.icon {
+    color: #198ACC;
     display:block;
     text-align: right;
   }
+
+  .nav.open a.icon:hover {
+    background-color: white;
+  }
+
 
   .team-member {
     display: flex;
