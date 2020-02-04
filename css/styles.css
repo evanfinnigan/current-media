@@ -81,20 +81,19 @@ footer {
   background-color: rgba(0,0,0,0.8);
 }
 
-
 .hero {
-  width: 100%;
+  min-height: 100%;
   height: 100%;
-  object-fit: scale-down;
+  max-height: 100%;
+  width: 100%;
+  object-fit: cover;
   overflow: hidden;
 }
 
 #heroVideo {
+  object-fit: cover;
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  height: calc(100vh);
 }
 
 .clear {
@@ -254,21 +253,6 @@ a:hover {
 
  /* Mobile + Tablet */
  @media only screen and (max-width: 1159px) {
-
-  .hero {
-    min-height: 100%;
-    height: 100%;
-    max-height: 100%;
-    width: 100%;
-    object-fit: cover;
-    overflow: hidden;
-  }
-
-  #heroVideo {
-    object-fit: cover;
-    width: 100%;
-    height: calc(100vh);
-  }
 
   .squeeze {
     margin: auto 1em;
