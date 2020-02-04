@@ -11,8 +11,31 @@ html(lang='en')
       +nav('..')
 
     main
-      .centered.squeeze
-        h1 Contact
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus tortor, dapibus vel interdum vitae, pretium non ipsum. Nullam ac interdum dolor. Aenean vitae bibendum sapien. Proin in ultrices velit, non dictum tortor. Aenean tempor velit non ultrices consectetur. Pellentesque pulvinar vel ligula id tempor. Nunc vitae iaculis neque, quis ornare lacus.
-
+      br
+      br
+      br
+      br
+      br
+      br
+      .squeeze
+        .contact-form
+          h1 Contact Us
+          form
+            .text-input
+              p Name: 
+              input(type="text" name="name")
+            .text-input
+              p Email: 
+              input(type="text" name="email")
+            .clear
+            p Message: 
+            textarea(rows='5' cols='50' name='message')
+            br
+            br
+            button(name='send') Send
+          .bg-image
+            img(src='../media/images/team-1.jpg')
+      br
+      br
+      br
     +footer('..')

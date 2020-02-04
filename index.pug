@@ -9,54 +9,109 @@ html(lang='en')
   body
     header
       +nav('.')
+      
       .full-width
         .hero
-          video#heroVideo(autoplay muted loop preload='auto')
+          video.heroFill(autoplay muted loop preload='auto')
             source(src='media/videos/Supercut.mp4')
-      .banner
-        img(src='media/images/current-stacked-logo.png')
-      
-      .centered.clear
-        a.button(href='') Contact
-
-      br
-      br
-
-      .centered.social.faded
-        a(href='')
-          img(src='media/icons/facebook.png')
-        a(href='')
-          img(src='media/icons/twitter.png')
-        a(href='')
-          img(src='media/icons/instagram.png')
-
-      .space
+          //- .heroFill
+          //-   br
+          //-   br
+          //-   br
+          //-   .centered.social.faded
+          //-     a(href='')
+          //-       img(src='media/icons/facebook.png')
+          //-     a(href='')
+          //-       img(src='media/icons/twitter.png')
+          //-     a(href='')
+          //-       img(src='media/icons/instagram.png')
+          .heroAnchor
+            h1 We are 
+              span.blue Current Media
+            p a multi-media production collective
+            a(href='') Play video reel
 
     .content
       main
         .squeeze
-          h1 Our Work
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus tortor, dapibus vel interdum vitae, pretium non ipsum. Nullam ac interdum dolor. Aenean vitae bibendum sapien. Proin in ultrices velit, non dictum tortor. Aenean tempor velit non ultrices consectetur. Pellentesque pulvinar vel ligula id tempor. Nunc vitae iaculis neque, quis ornare lacus. 
-
-        br
-        br
+          h1.centered What We Offer
 
         .full-width.ib
           a.showcase-item
-              h2 Project Title
-              img(src='media/images/team-1.jpg')
+            h2 Videography
+            img(src='media/images/team-1.jpg')
+            ul
+              h1 Videography
+              li Aerial Drone Footage
+              li RED Slow Motion Cameras
+              li Shooting on location
+              li Full Production Crew
           a.showcase-item
-            h2 Project Title
+            h2 Photography
+            img(src='media/images/team-3.jpg')
+            ul
+              h1 Photography
+              li Aerial Drone Footage
+              li RED Slow Motion Cameras
+              li Shooting on location
+              li Full Production Crew
+          a.showcase-item
+            h2 Graphic Design
             img(src='media/images/team-2.jpg')
+            ul
+              h1 Graphic Design
+              li Aerial Drone Footage
+              li RED Slow Motion Cameras
+              li Shooting on location
+              li Full Production Crew
           a.showcase-item
-            h2 Project Title
-            img(src='media/images/team-5.jpg')
-          a.showcase-item
-            h2 Project Title
+            h2 Web Design
             img(src='media/images/team-4.jpg')
+            ul
+              h1 Web Design
+              li Aerial Drone Footage
+              li RED Slow Motion Cameras
+              li Shooting on location
+              li Full Production Crew
+     
+        br
+        br
+        br
+        br
+        br
 
         .squeeze
-          h1 Other stuff
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus tortor, dapibus vel interdum vitae, pretium non ipsum. Nullam ac interdum dolor. Aenean vitae bibendum sapien. Proin in ultrices velit, non dictum tortor. Aenean tempor velit non ultrices consectetur. Pellentesque pulvinar vel ligula id tempor. Nunc vitae iaculis neque, quis ornare lacus. 
+          h1.centered Who We've Worked With
+        .sponsors
+          img(src='media/icons/crafty-elk-logo.png')
+          img(src='media/icons/lakewood-logo.png')
+          img(src='media/icons/erb-logo.png')
+          img(src='media/icons/middlesex-centre-logo.png')
+
+        br
+        br
+        br
+        br
+        br
+          
+        .contact-form.squeeze
+          h1 Contact Us
+          form
+            .text-input
+              p Name: 
+              input(type="text" name="name")
+            .text-input
+              p Email: 
+              input(type="text" name="email")
+            .clear
+            p Message: 
+            textarea(rows='5' cols='50' name='message')
+            br
+            br
+            button(name='send') Send
+          .bg-image
+            img(src='media/images/team-1.jpg')
+            
+
         
       +footer('.')
