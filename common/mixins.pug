@@ -2,15 +2,15 @@ mixin nav(path)
   .nav#topnav
     nav
       span.home
-        a(href='/') 
+        a(href=path + '/') 
           img(src=path + '/media/images/current-word-logo-cropped.png' height='32px')
       span.links
         a.icon(href='javascript:void(0);' onclick='navDropDown()') ☰
         .link-area
-          a(href='/about') About
-          a(href='/our-work') Our Work
-          a(href='/our-team') Our Team
-          a(href='/contact') Contact
+          a(href=path + '/about/') About
+          a(href=path + '/our-work/') Our Work
+          a(href=path + '/our-team/') Our Team
+          a(href=path + '/contact/') Contact
           a(href='tel:519-771-4993') (519) 771-4993
       
 mixin meta(path)
