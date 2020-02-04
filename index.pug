@@ -1,0 +1,24 @@
+include common/mixins.pug
+doctype html
+html(lang='en')
+  head
+    +meta('.')
+    meta(name='description' content='Current Media')
+    title Current Media - Home
+  
+  body
+    header
+      +nav('.')
+    
+    main
+      .full-width
+        .hero
+          video#heroVideo(autoplay muted loop preload='auto')
+            source(src='media/videos/lakewood-garden-centre/Lakewood Landscaping Promo.mp4')
+      .banner
+        img(src='media/images/current-stacked-logo.png')
+      
+      .centered.clear
+        a.button(href='') Contact
+      
+    include ./common/footer.pug

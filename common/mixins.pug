@@ -1,0 +1,17 @@
+mixin nav(path)
+  .nav
+    nav
+      a#home(href='') 
+        img(src='media/images/current-word-logo-cropped.png' height='32px')
+      a(href='') (519) 771-4993
+      a(href='') Contact
+      a(href='') Our Team
+      a(href='') Our Work
+      a(href='') About
+      
+
+mixin meta(path)
+  link(rel='stylesheet' type='text/css' href=path+'/css/styles.css')
+  include meta.pug
+
+
