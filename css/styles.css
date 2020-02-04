@@ -34,7 +34,7 @@ a:hover img {
 }
 
 button {
-  border: solid;
+  border: 1px solid white;
   color: white;
   background-color: #198ACC;
   padding: 10px 15px;
@@ -330,6 +330,25 @@ a.showcase-item:hover ul {
   filter: invert(1);
 }
 
+.contact-form {
+  position: relative;
+  color: white;
+  font-weight: 500;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.bg-image img {
+  filter: brightness(0.2);
+}
 
 .content {
   position: absolute;
@@ -521,5 +540,9 @@ a.showcase-item:hover ul {
 
   .text-input {
     width: 100%;
+  }
+
+  textarea {
+    width:100%;
   }
 }
