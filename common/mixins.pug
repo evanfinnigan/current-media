@@ -1,17 +1,31 @@
 mixin nav(path)
-  .nav
+  .nav#topnav
     nav
-      a#home(href='') 
-        img(src='media/images/current-word-logo-cropped.png' height='32px')
-      a(href='') (519) 771-4993
-      a(href='') Contact
-      a(href='') Our Team
-      a(href='') Our Work
-      a(href='') About
+      span.home
+        a(href='/') 
+          img(src=path + '/media/images/current-word-logo-cropped.png' height='32px')
+      span.links
+        a.icon(href='javascript:void(0);' onclick='navDropDown()') ☰
+        .link-area
+          a(href='/about') About
+          a(href='/our-work') Our Work
+          a(href='/our-team') Our Team
+          a(href='/contact') Contact
+          a(href='tel:519-771-4993') (519) 771-4993
       
-
 mixin meta(path)
   link(rel='stylesheet' type='text/css' href=path+'/css/styles.css')
   include meta.pug
 
-
+mixin footer(path)
+  footer
+    .footer
+      .social
+        a(href='')
+          img(src=path+'/media/icons/facebook.png')
+        a(href='')
+          img(src=path+'/media/icons/twitter.png')
+        a(href='')
+          img(src=path+'/media/icons/instagram.png')
+      .social
+        p Ⓒ Current Media 2020

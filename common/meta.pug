@@ -12,4 +12,14 @@ link(href='https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700
 //- Web manifest
 link(rel='manifest' href='/site.webmanifest')
 
-//- Nav script: TODO
+//- Nav script
+script.
+  
+  function navDropDown() {
+    var x = document.getElementById("topnav");
+    if (x.className === "nav") {
+      x.className += " open";
+    } else {
+      x.className = "nav";
+    }
+  }

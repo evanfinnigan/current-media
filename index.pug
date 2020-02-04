@@ -9,8 +9,6 @@ html(lang='en')
   body
     header
       +nav('.')
-    
-    main
       .full-width
         .hero
           video#heroVideo(autoplay muted loop preload='auto')
@@ -20,5 +18,45 @@ html(lang='en')
       
       .centered.clear
         a.button(href='') Contact
-      
-    include ./common/footer.pug
+
+      br
+      br
+
+      .centered.social.faded
+        a(href='')
+          img(src='media/icons/facebook.png')
+        a(href='')
+          img(src='media/icons/twitter.png')
+        a(href='')
+          img(src='media/icons/instagram.png')
+
+      .space
+
+    .content
+      main
+        .squeeze
+          h1 Our Work
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus tortor, dapibus vel interdum vitae, pretium non ipsum. Nullam ac interdum dolor. Aenean vitae bibendum sapien. Proin in ultrices velit, non dictum tortor. Aenean tempor velit non ultrices consectetur. Pellentesque pulvinar vel ligula id tempor. Nunc vitae iaculis neque, quis ornare lacus. 
+
+        br
+        br
+
+        .full-width.ib
+          a.showcase-item
+              h2 Project Title
+              img(src='media/images/team-1.jpg')
+          a.showcase-item
+            h2 Project Title
+            img(src='media/images/team-2.jpg')
+          a.showcase-item
+            h2 Project Title
+            img(src='media/images/team-5.jpg')
+          a.showcase-item
+            h2 Project Title
+            img(src='media/images/team-4.jpg')
+
+        .squeeze
+          h1 Other stuff
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus tortor, dapibus vel interdum vitae, pretium non ipsum. Nullam ac interdum dolor. Aenean vitae bibendum sapien. Proin in ultrices velit, non dictum tortor. Aenean tempor velit non ultrices consectetur. Pellentesque pulvinar vel ligula id tempor. Nunc vitae iaculis neque, quis ornare lacus. 
+        
+      +footer('.')
