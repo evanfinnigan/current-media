@@ -20,8 +20,28 @@ a {
   transition: 0.2s;
 }
 
+a img {
+  transition: 0.2s;
+}
+
 a:hover {
-  opacity: 0.5;
+  /* opacity: 0.5; */
+  filter: hue-rotate(-90deg);
+}
+
+a:hover img {
+  filter: brightness(0.4) saturate(0) ;
+}
+
+button {
+  border: solid;
+  color: white;
+  background-color: #198ACC;
+  padding: 10px 15px;
+}
+
+button:hover {
+  opacity: 0.8;
 }
 
 /* Headers styles (nav, top things) */
@@ -35,8 +55,9 @@ a:hover {
 }
 
 nav {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: auto;
+  padding: 2em;
   font-size: 1em;
   font-weight: bold;
 }
@@ -56,6 +77,7 @@ nav {
 
 nav .links {
   color: white;
+  background-color: rgba(0,0,0,0.6);
   float: right;
   transition: 0.2s;
 }
@@ -162,6 +184,28 @@ footer {
   font-weight: 800;
 }
 
+.sponsors {
+  display: block;
+  max-width: 640px;
+  margin: auto;
+}
+
+.sponsors img {
+  display: inline-block;
+  margin: 10px;
+  width: calc(25% - 20px);
+  height: 150px;
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: scale-down;
+  filter: brightness(1) grayscale(1);
+}
+
+.text-input {
+  float: left;
+  width: 30%;
+}
+
 .clear {
 	clear:both;
 }
@@ -210,6 +254,9 @@ footer {
   position: relative;
   float: left;
   width: 25%;
+  max-height: 250px;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 .showcase-item h2 {
@@ -219,6 +266,25 @@ footer {
   width: 70%;
   /* border-radius: 0 100px 100px 0; */
   background-color: rgba(255,255,255,0.8);
+}
+
+a.showcase-item ul {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 0;
+  display: none;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+a.showcase-item:hover ul {
+  opacity: 1;
+  height: 100%;
+  display: block;
+  transition: 0.5s;
+  color: white;
+  font-weight: bold;
 }
 
 .showcase-item a img {
@@ -315,6 +381,10 @@ footer {
 
  /* Mobile + Tablet */
  @media only screen and (max-width: 1159px) {
+
+  nav {
+    padding: 0;
+  }
 
   .heroAnchor {
     font-size: 1em;
@@ -422,6 +492,7 @@ footer {
  
 /* Mobile */
 @media only screen and (max-width: 600px) {
+
   .showcase-item {
     width: 100%;
   }
@@ -435,6 +506,20 @@ footer {
   }
 
   .team-member-description {
+    width: 100%;
+  }
+
+  .sponsors {
+    width: 80%;
+    margin: auto;
+  }
+
+  .sponsors img {
+    width: 100%;
+    height: 150px;
+  }
+
+  .text-input {
     width: 100%;
   }
 }
