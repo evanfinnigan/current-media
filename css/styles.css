@@ -501,6 +501,7 @@ a.showcase-item:hover ul {
   }
   
   .nav.open .links .link-area {
+    overflow: scroll;
     opacity: 1;
     height: 0;
     z-index: 2;
@@ -539,6 +540,63 @@ a.showcase-item:hover ul {
 
   .nav.open a.icon:hover {
     background-color: white;
+  }
+
+  .dropdown {
+    display: none;
+    max-width: 250px;
+  }
+
+  .nav.open .links .link-area .dropdown {
+    display: block;
+  }
+  
+  .dropbtn {
+    display: block;
+    font-size: 2em;
+    color: white;
+    background-color: black;
+    opacity: 0.7;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 300;
+    margin: 10px;
+    padding: 16px 16px;
+    width: 282px;
+    height: auto;
+    transition: 0.2s;
+  }
+  
+  .dropbtn:hover {
+    filter: drop-shadow(2px 2px 3px black);
+    font-weight: 500;
+    opacity: 1;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: relative;
+    width: 250px;
+    z-index: 1;
+    background-color: rgba(0,0,0,0);
+  }
+  
+  .dropdown-content a {
+    display: block;
+    width: 250px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    font-size: .8em;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:active .dropbtn {
+    background-color: #198ACC;
   }
 
   .team-member {
