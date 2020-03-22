@@ -26,7 +26,10 @@ a img {
 
 a:hover {
   /* opacity: 0.5; */
-  filter: hue-rotate(-90deg);
+  /* filter: hue-rotate(90deg); */
+  filter: drop-shadow(2px 2px 3px black);
+  font-weight: 500;
+  opacity: 0.7;
 }
 
 a:hover img {
@@ -94,6 +97,49 @@ nav .links a.icon {
   display: none;
 }
 
+.dropdown {
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  height: 54px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+  transition: 0.2s;
+}
+
+.dropbtn:hover {
+  filter: drop-shadow(2px 2px 3px black);
+  font-weight: 500;
+  opacity: 1;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 233px;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.dropdown-content a {
+  display: block;
+  width: 200px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #198ACC;
+}
+
 .links a {
   font-weight: 100;
   transition: 0.2s;
@@ -134,6 +180,16 @@ footer {
   padding: 3em;
   color: white;
   background-color: rgba(0,0,0,0.8);
+}
+
+.footer a {
+  color: #198ACC;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #198ACC;
+  font-weight: 500;
 }
 
 .hero {
@@ -484,7 +540,6 @@ a.showcase-item:hover ul {
   .nav.open a.icon:hover {
     background-color: white;
   }
-
 
   .team-member {
     display: flex;
