@@ -1,0 +1,60 @@
+include ../common/mixins.pug
+doctype html
+html(lang='en')
+  head
+    +meta('..')
+    meta(name='description' content='About Current Media')
+    title Business Consulting &amp; Social Strategy
+  
+  body
+    header
+      +nav('..')
+
+    main
+      br
+      br
+      br
+      .squeeze
+        h1 Business Consulting &amp; Social Strategy
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus tortor, dapibus vel interdum vitae, pretium non ipsum. Nullam ac interdum dolor. Aenean vitae bibendum sapien. Proin in ultrices velit, non dictum tortor. Aenean tempor velit non ultrices consectetur. Pellentesque pulvinar vel ligula id tempor. Nunc vitae iaculis neque, quis ornare lacus.
+
+        br
+        br
+        br
+
+      .squeeze
+
+        h2 Photography Team
+
+        .team-member
+          .team-member-photo
+            img(src='../media/images/taylor-lalonde.jpg')
+          .team-member-description
+            h2 Taylor Lalonde
+            em Freelance Videographer | Production Assistant
+            p I put ranch on everything.
+            .social
+              a(href='https://twitter.com/tayloralalonde')
+                img(src='../media/icons/twitter.png')
+              a(href='https://www.instagram.com/shootwithtay')
+                img(src='../media/icons/instagram.png')
+
+        .swap
+          .team-member
+            .team-member-photo
+              img(src='../media/images/team-1.jpg')
+            .team-member-description
+              h2 Andrew McArdle
+              em Professional title
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus tortor, dapibus vel interdum vitae, pretium non ipsum. Nullam ac interdum dolor. Aenean vitae bibendum sapien. 
+              .social
+                a(href='')
+                  img(src='../media/icons/facebook.png')
+                a(href='')
+                  img(src='../media/icons/twitter.png')
+                a(href='')
+                  img(src='../media/icons/instagram.png')
+
+
+
+    +footer('..')

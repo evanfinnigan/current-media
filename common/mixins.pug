@@ -8,8 +8,14 @@ mixin nav(path)
         a.icon(href='javascript:void(0);' onclick='navDropDown()') ☰
         .link-area
           a(href=path + '/about/') About
-          a(href=path + '/our-work/') Our Work
-          a(href=path + '/our-team/') Our Team
+          .dropdown
+            button(class='dropbtn') Services ▼
+            .dropdown-content
+              a(href=path + '/services/video-production.html') Video Production
+              a(href=path + '/services/photography.html') Photography
+              a(href=path + '/services/graphic-design.html') Graphic Design
+              a(href=path + '/services/web-design.html') Web Design
+              a(href=path + '/business-consulting.html') Business Consulting &amp; Social Strategy
           a(href=path + '/contact/') Contact
           a(href='tel:519-771-4993') (519) 771-4993
       
@@ -27,5 +33,11 @@ mixin footer(path)
           img(src=path+'/media/icons/twitter.png')
         a(href='')
           img(src=path+'/media/icons/instagram.png')
+      
+      .social
+        a(href=path + '/our-work/') Our Work
+        a(href=path + '/our-team/') Our Team
+        a(href=path + '/careers/') Careers
+        
       .social
         p Ⓒ Current Media 2020
