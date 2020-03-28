@@ -351,6 +351,18 @@ a.showcase-item:hover ul {
   width: 100%;
 }
 
+
+.examples {
+  display: block;
+  text-align: center;
+}
+
+.examples img {
+  object-fit: cover;
+  width: 20%;
+  margin: 3%;
+}
+
 .team-member {
   display: block;
   height: auto;
@@ -627,6 +639,12 @@ a.showcase-item:hover ul {
 
   .showcase-item {
     width: 100%;
+  }
+
+  .examples img {
+    object-fit: cover;
+    width: 80%;
+    margin: 10px;
   }
 
   .team-member {
