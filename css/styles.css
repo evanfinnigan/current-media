@@ -363,6 +363,16 @@ a.showcase-item:hover ul {
   margin: 3%;
 }
 
+.example {
+  display: inline-block;
+  width: 20%;
+  margin: 3%;
+}
+
+.example video {
+  width: 100%;
+}
+
 .team-member {
   display: block;
   height: auto;
@@ -645,6 +655,22 @@ a.showcase-item:hover ul {
     object-fit: cover;
     width: 80%;
     margin: 10px;
+  }
+
+  .examples video {
+    object-fit: cover;
+    width: 80%;
+    margin: 10px;
+  }
+
+  .example {
+    display: inline-block;
+    width: 80%;
+    margin: 10px;
+  }
+  
+  .example video {
+    width: 100%;
   }
 
   .team-member {
