@@ -9,109 +9,47 @@ html(lang='en')
   body
     header
       +nav('.')
-      
-      .full-width
-        .hero
-          video.heroFill(autoplay muted loop preload='auto')
-            source(src='media/videos/Supercut.mp4')
-          //- .heroFill
-          //-   br
-          //-   br
-          //-   br
-          //-   .centered.social.faded
-          //-     a(href='')
-          //-       img(src='media/icons/facebook.png')
-          //-     a(href='')
-          //-       img(src='media/icons/twitter.png')
-          //-     a(href='')
-          //-       img(src='media/icons/instagram.png')
-          .heroAnchor
-            h1 We are 
-              span.blue Current Media
-            p a multi-media production collective
-            a(href='') Play video reel
 
-    .content
-      main
-        .squeeze
-          h1.centered What We Offer
+    main
+      .squeeze.centered
+        h1(style="margin-top: 3em;") Have an Idea?
+        a(href='/consultation' )
+          .btn.tooltip
+            | Free Consultation 
+            span.tooltiptext Get a quick quote today!
+        br
+        br
+        br
+        br
+        a(href='/build-team' ) 
+          .btn.tooltip
+            | Start Building
+            span.tooltiptext Start building your team now!
+        .cards
+          a(href='/build-team/non-profit')
+            // :)
+            .square-card(style='background-image: url("/media/icons/non-profit.png");')
+              button.info
+                i.fa.fa-info
+                .info-tooltip
+                  .info-tooltip-content
+                    .info-tooltip-header Non-profit / Startup
+                    .info-tooltip-body Non-profit? blah blah blah blah blah blah!
 
-        .full-width.ib
-          a.showcase-item
-            h2 Videography
-            img(src='media/images/brayden-wagenaar.jpg')
-            ul
-              h1 Videography
-              li Aerial Drone Footage
-              li RED Slow Motion Cameras
-              li Shooting on location
-              li Full Production Crew
-          a.showcase-item
-            h2 Photography
-            img(src='media/images/andrew-mcardle.jpg')
-            ul
-              h1 Photography
-              li Aerial Drone Footage
-              li RED Slow Motion Cameras
-              li Shooting on location
-              li Full Production Crew
-          a.showcase-item
-            h2 Graphic Design
-            img(src='media/images/david-huynh.jpg')
-            ul
-              h1 Graphic Design
-              li Aerial Drone Footage
-              li RED Slow Motion Cameras
-              li Shooting on location
-              li Full Production Crew
-          a.showcase-item
-            h2 Web Design
-            img(src='media/images/team-4.jpg')
-            ul
-              h1 Web Design
-              li Aerial Drone Footage
-              li RED Slow Motion Cameras
-              li Shooting on location
-              li Full Production Crew
-     
-        br
-        br
-        br
-        br
-        br
-
-        .squeeze
-          h1.centered Who We've Worked With
-        .sponsors
-          img(src='media/icons/crafty-elk-logo.png')
-          img(src='media/icons/lakewood-logo.png')
-          img(src='media/icons/erb-logo.png')
-          img(src='media/icons/middlesex-centre-logo.png')
-
-        br
-        br
-        br
-        br
-        br
-          
-        .contact-form.squeeze
-          h1 Contact Us
-          form
-            .text-input
-              p Name: 
-              input(type="text" name="name")
-            .text-input
-              p Email: 
-              input(type="text" name="email")
-            .clear
-            p Message: 
-            textarea(rows='5' cols='50' name='message')
-            br
-            br
-            button(name='send') Send
-          .bg-image
-            img(src='media/images/team-1.jpg')
-            
-
+          a(href='/build-team/individual')
+            // :)
+            .square-card(style='background-image: url("/media/icons/individual-business.png");')
+              button.info
+                i.fa.fa-info
+                .info-tooltip
+                  .info-tooltip-content
+                    .info-tooltip-header Individual
+                    .info-tooltip-body Individual business? Let us help you get your brand off your feet!
+          a(href='/build-team/corporate')
+            // :)
+            .square-card(style='background-image: url("/media/icons/corporate-commercial.png");')
+          a(href='/build-team/live-event') 
+            // :)
+            .square-card(style='background-image: url("/media/icons/live-events.png");')
         
       +footer('.')

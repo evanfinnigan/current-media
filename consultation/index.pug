@@ -1,0 +1,35 @@
+include ../common/mixins.pug
+doctype html
+html(lang='en')
+  head
+    +meta('..')
+    meta(name='description' content='About Current Media')
+    title About - Current Media
+  
+  body
+    header
+      +nav('..')
+
+    main
+      .squeeze
+        br
+        br
+        br
+        h1 Free Consultation
+        br
+        form
+          fieldset
+            .form-group.half
+              input#inputName(type='text' placeholder='Name / Company *' name='name')
+            .form-group
+              input#inputEmail(type='text' placeholder='Email *' name='email')
+            .form-group
+              input#inputPhone(type='text' placeholder='Phone Number *' name='phone')
+            .form-group
+              textarea#messageContents(type='text' placeholder='Description of the services you require *' name='contents')
+            .form-group
+              button#btnSubmit(type='submit') Submit
+        br
+        br
+
+    +footer('..')

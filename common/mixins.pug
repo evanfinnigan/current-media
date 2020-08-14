@@ -1,27 +1,29 @@
 mixin nav(path)
   .nav#topnav
     nav
-      span.home
-        a(href=path + '/') 
-          img(src=path + '/media/images/current-word-logo-cropped.png' height='32px')
       span.links
         a.icon(href='javascript:void(0);' onclick='navDropDown()') ☰
         .link-area
-          a(href=path + '/about/') About
-          .dropdown
-            button(class='dropbtn') Services ▼
-            .dropdown-content
-              a(href=path + '/services/video-production.html') Video Production
-              a(href=path + '/services/photography.html') Photography
-              a(href=path + '/services/graphic-design.html') Graphic Design
-              a(href=path + '/services/web-design.html') Web Design
-              a(href=path + '/services/business-consulting.html') Business Consulting &amp; Social Strategy
+          a(href=path + '/') Home
+          span.nomobile |
+          a(href=path + '/services/') Services
+          span.nomobile |
+          a(href=path + '/build-team/') Build Team
+          span.nomobile |
+          a(href=path + '/our-team/') Our Team
+          span.nomobile |
           a(href=path + '/contact/') Contact
-          a(href='tel:519-555-0100') (519) 555-0100
       
 mixin meta(path)
   link(rel='stylesheet' type='text/css' href=path+'/css/styles.css')
   include meta.pug
+
+mixin progress(number)
+  br
+
+mixin square-card-link(name, icon, _href)
+  a(href=_href)
+    .square-card-service(style='background-image: url(\"/media/icons/' + icon + '\");')
 
 mixin footer(path)
   footer
@@ -33,10 +35,13 @@ mixin footer(path)
           img(src=path+'/media/icons/twitter.png')
         a(href='')
           img(src=path+'/media/icons/instagram.png')
-      
-      .social
+      br
+      br
+      .link-area
         a(href=path + '/our-work/') Our Work
+        span |
         a(href=path + '/our-team/') Our Team
+        span |
         a(href=path + '/careers/') Careers
         
       .social

@@ -1,0 +1,34 @@
+include ../common/mixins.pug
+doctype html
+html(lang='en')
+  head
+    +meta('..')
+    meta(name='description' content='About Current Media')
+    title Build Your Team - Current Media
+  
+  body
+    header
+      +nav('..')
+
+    main
+      .squeeze.centered
+        br
+        br
+        br
+        h1 Add a Service
+        +progress(1)
+        .cards
+          div
+            +square-card-link('Design', 'design-icon.png', '/build-team/add-design')
+            +square-card-link('Video', 'video-icon.png', '/build-team/add-video')
+          div
+            +square-card-link('Social', 'social-icon.png', '/build-team/add-social')
+            +square-card-link('Web', 'web-icon.png', '/build-team/add-web')
+          div
+            +square-card-link('Photo', 'photo-icon.png', '/build-team/add-photo')
+            +square-card-link('Consultation', 'consultation-icon.png', '/free-consultation')
+          
+        
+      
+
+    +footer('..')
