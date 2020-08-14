@@ -18,8 +18,12 @@ mixin meta(path)
   link(rel='stylesheet' type='text/css' href=path+'/css/styles.css')
   include meta.pug
 
-mixin progress(number)
-  br
+mixin progress(number, max)
+  div
+    span(style="text-align: center") #{number} / #{max}
+    .progress
+      .progress-inner(style="width: " + 100*number/max + "%;")
+        // :)
 
 mixin square-card-link(name, icon, _href)
   a(href=_href)
