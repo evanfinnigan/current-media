@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="icon" href="/media/icons/favicon.ico"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap" rel="stylesheet"/>
+    <link rel="manifest" href="/site.webmanifest"/>
+    <script>
+      function navDropDown() {
+        var x = document.getElementById("topnav");
+        if (x.className === "nav") {
+          x.className += " open";
+        } else {
+          x.className = "nav";
+        }
+      }
+    </script>
+    <meta name="description" content="About Current Media">
+    <title>About - Current Media</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav" id="topnav">
+        <nav><span class="links"><a class="icon" href="javascript:void(0);" onclick="navDropDown()">☰</a>
+            <div class="link-area"><a href="../">Home</a><span class="nomobile">|</span><a href="../services/">Services</a><span class="nomobile">|</span><a href="../build-team/">Build Team</a><span class="nomobile">|</span><a href="../our-team/">Our Team</a><span class="nomobile">|</span><a href="../contact/">Contact</a></div></span></nav>
+      </div>
+    </header>
+    <main>
+      <div class="squeeze"><br><br><br>
+        <h1>Free Consultation</h1><br>
+        <form>
+          <fieldset>
+            <div class="form-group half">
+              <input id="inputName" type="text" placeholder="Name / Company *" name="name">
+            </div>
+            <div class="form-group">
+              <input id="inputEmail" type="text" placeholder="Email *" name="email">
+            </div>
+            <div class="form-group">
+              <input id="inputPhone" type="text" placeholder="Phone Number *" name="phone">
+            </div>
+            <div class="form-group">
+              <textarea id="messageContents" type="text" placeholder="Description of the services you require *" name="contents"></textarea>
+            </div>
+            <div class="form-group">
+              <button id="btnSubmit" type="submit">Submit</button>
+            </div>
+          </fieldset>
+        </form><br><br>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="social"><a href=""><img src="../media/icons/facebook.png"/></a><a href=""><img src="../media/icons/twitter.png"/></a><a href=""><img src="../media/icons/instagram.png"/></a></div><br/><br/>
+        <div class="link-area"><a href="../our-work/">Our Work</a><span>|</span><a href="../our-team/">Our Team</a><span>|</span><a href="../careers/">Careers</a></div>
+        <div class="social">
+          <p>Ⓒ Current Media 2020</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

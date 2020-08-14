@@ -5,6 +5,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <link rel="icon" href="/media/icons/favicon.ico"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap" rel="stylesheet"/>
     <link rel="manifest" href="/site.webmanifest"/>
     <script>
@@ -23,96 +24,52 @@
   <body>
     <header>
       <div class="nav" id="topnav">
-        <nav><span class="home"><a href="./"> <img src="./media/images/current-word-logo-cropped.png" height="32px"/></a></span><span class="links"><a class="icon" href="javascript:void(0);" onclick="navDropDown()">☰</a>
-            <div class="link-area"><a href="./about/">About</a>
-              <div class="dropdown">
-                <button class="dropbtn">Services ▼</button>
-                <div class="dropdown-content"><a href="./services/video-production.html">Video Production</a><a href="./services/photography.html">Photography</a><a href="./services/graphic-design.html">Graphic Design</a><a href="./services/web-design.html">Web Design</a><a href="./services/business-consulting.html">Business Consulting &amp; Social Strategy</a></div>
-              </div><a href="./contact/">Contact</a><a href="tel:519-771-4993">(519) 771-4993</a>
-            </div></span></nav>
-      </div>
-      <div class="full-width">
-        <div class="hero">
-          <video class="heroFill" autoplay muted loop preload="auto">
-            <source src="media/videos/Supercut.mp4">
-          </video>
-          <div class="heroAnchor">
-            <h1>We are <span class="blue">Current Media</span></h1>
-            <p>a multi-media production collective</p><a href="">Play video reel</a>
-          </div>
-        </div>
+        <nav><span class="links"><a class="icon" href="javascript:void(0);" onclick="navDropDown()">☰</a>
+            <div class="link-area"><a href="./">Home</a><span class="nomobile">|</span><a href="./services/">Services</a><span class="nomobile">|</span><a href="./build-team/">Build Team</a><span class="nomobile">|</span><a href="./our-team/">Our Team</a><span class="nomobile">|</span><a href="./contact/">Contact</a></div></span></nav>
       </div>
     </header>
-    <div class="content">
-      <main>
-        <div class="squeeze">
-          <h1 class="centered">What We Offer</h1>
-        </div>
-        <div class="full-width ib"><a class="showcase-item">
-            <h2>Videography</h2><img src="media/images/brayden-wagenaar.jpg">
-            <ul>
-              <h1>Videography</h1>
-              <li>Aerial Drone Footage</li>
-              <li>RED Slow Motion Cameras</li>
-              <li>Shooting on location</li>
-              <li>Full Production Crew</li>
-            </ul></a><a class="showcase-item">
-            <h2>Photography</h2><img src="media/images/andrew-mcardle.jpg">
-            <ul>
-              <h1>Photography</h1>
-              <li>Aerial Drone Footage</li>
-              <li>RED Slow Motion Cameras</li>
-              <li>Shooting on location</li>
-              <li>Full Production Crew</li>
-            </ul></a><a class="showcase-item">
-            <h2>Graphic Design</h2><img src="media/images/david-huynh.jpg">
-            <ul>
-              <h1>Graphic Design</h1>
-              <li>Aerial Drone Footage</li>
-              <li>RED Slow Motion Cameras</li>
-              <li>Shooting on location</li>
-              <li>Full Production Crew</li>
-            </ul></a><a class="showcase-item">
-            <h2>Web Design</h2><img src="media/images/team-4.jpg">
-            <ul>
-              <h1>Web Design</h1>
-              <li>Aerial Drone Footage</li>
-              <li>RED Slow Motion Cameras</li>
-              <li>Shooting on location</li>
-              <li>Full Production Crew</li>
-            </ul></a></div><br><br><br><br><br>
-        <div class="squeeze">
-          <h1 class="centered">Who We've Worked With</h1>
-        </div>
-        <div class="sponsors"><img src="media/icons/crafty-elk-logo.png"><img src="media/icons/lakewood-logo.png"><img src="media/icons/erb-logo.png"><img src="media/icons/middlesex-centre-logo.png"></div><br><br><br><br><br>
-        <div class="contact-form squeeze">
-          <h1>Contact Us</h1>
-          <form>
-            <div class="text-input">
-              <p>Name: </p>
-              <input type="text" name="name">
-            </div>
-            <div class="text-input">
-              <p>Email: </p>
-              <input type="text" name="email">
-            </div>
-            <div class="clear"></div>
-            <p>Message: </p>
-            <textarea rows="5" cols="50" name="message"></textarea><br><br>
-            <button name="send">Send</button>
-          </form>
-          <div class="bg-image"><img src="media/images/team-1.jpg"></div>
-        </div>
-      </main>
+    <main>
+      <div class="squeeze centered">
+        <h1 style="margin-top: 3em;">Have an Idea?</h1><a href="/consultation">
+          <div class="btn tooltip">Free Consultation <span class="tooltiptext">Get a quick quote today!</span></div></a><br><br><br><br><a href="/build-team"> 
+          <div class="btn tooltip">Start Building<span class="tooltiptext">Start building your team now!</span></div></a>
+        <div class="cards"><a href="/build-team/non-profit">
+            <!-- :)-->
+            <div class="square-card" style="background-image: url(&quot;/media/icons/non-profit.png&quot;);">
+              <button class="info"><i class="fa fa-info"></i>
+                <div class="info-tooltip">
+                  <div class="info-tooltip-content">
+                    <div class="info-tooltip-header">Non-profit / Startup</div>
+                    <div class="info-tooltip-body">Non-profit? blah blah blah blah blah blah!</div>
+                  </div>
+                </div>
+              </button>
+            </div></a><a href="/build-team/individual">
+            <!-- :)-->
+            <div class="square-card" style="background-image: url(&quot;/media/icons/individual-business.png&quot;);">
+              <button class="info"><i class="fa fa-info"></i>
+                <div class="info-tooltip">
+                  <div class="info-tooltip-content">
+                    <div class="info-tooltip-header">Individual</div>
+                    <div class="info-tooltip-body">Individual business? Let us help you get your brand off your feet!</div>
+                  </div>
+                </div>
+              </button>
+            </div></a><a href="/build-team/corporate">
+            <!-- :)-->
+            <div class="square-card" style="background-image: url(&quot;/media/icons/corporate-commercial.png&quot;);"></div></a><a href="/build-team/live-event"> 
+            <!-- :)-->
+            <div class="square-card" style="background-image: url(&quot;/media/icons/live-events.png&quot;);"></div></a></div>
+      </div>
       <footer>
         <div class="footer">
-          <div class="social"><a href=""><img src="./media/icons/facebook.png"/></a><a href=""><img src="./media/icons/twitter.png"/></a><a href=""><img src="./media/icons/instagram.png"/></a></div>
-          <div class="social"><a href="./our-work/">Our Work</a><a href="./our-team/">Our Team</a><a href="./careers/">Careers</a></div>
+          <div class="social"><a href=""><img src="./media/icons/facebook.png"/></a><a href=""><img src="./media/icons/twitter.png"/></a><a href=""><img src="./media/icons/instagram.png"/></a></div><br/><br/>
+          <div class="link-area"><a href="./our-work/">Our Work</a><span>|</span><a href="./our-team/">Our Team</a><span>|</span><a href="./careers/">Careers</a></div>
           <div class="social">
             <p>Ⓒ Current Media 2020</p>
           </div>
         </div>
       </footer>
-    </div>
+    </main>
   </body>
 </html>
