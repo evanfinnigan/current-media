@@ -3,6 +3,7 @@ doctype html
 html(lang='en')
   head
     +meta('.')
+    script(src='./index.js')
     meta(name='description' content='Current Media')
     title Current Media - Home
   
@@ -13,7 +14,7 @@ html(lang='en')
     main
       .squeeze.centered
         h1(style="margin-top: 3em;") Have an Idea?
-        a(href='/consultation' )
+        a(href='./consultation' )
           .btn.tooltip
             | Free Consultation 
             span.tooltiptext Get a quick quote today!
@@ -21,12 +22,12 @@ html(lang='en')
         br
         br
         br
-        a(href='/build-team' ) 
+        a(href='./build-team' ) 
           .btn.tooltip
             | Start Building
             span.tooltiptext Start building your team now!
         .cards
-          a(href='/build-team/non-profit')
+          a(href='./build-team')
             // :)
             .square-card(style='background-image: url("./media/icons/non-profit.png");')
               button.info
@@ -36,7 +37,7 @@ html(lang='en')
                     .info-tooltip-header Non-profit / Startup
                     .info-tooltip-body Non-profit? blah blah blah blah blah blah!
 
-          a(href='/build-team/individual')
+          a(href='./build-team')
             // :)
             .square-card(style='background-image: url("./media/icons/individual-business.png");')
               button.info
@@ -45,10 +46,10 @@ html(lang='en')
                   .info-tooltip-content
                     .info-tooltip-header Individual
                     .info-tooltip-body Individual business? Let us help you get your brand off your feet!
-          a(href='/build-team/corporate')
+          a(href='./build-team')
             // :)
             .square-card(style='background-image: url("./media/icons/corporate-commercial.png");')
-          a(href='/build-team/live-event') 
+          a(href='./build-team') 
             // :)
             .square-card(style='background-image: url("./media/icons/live-events.png");')
         

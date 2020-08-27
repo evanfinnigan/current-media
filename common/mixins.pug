@@ -25,6 +25,22 @@ mixin progress(number, max)
       .progress-inner(style="width: " + 100*number/max + "%;")
         // :)
 
+mixin build-icons(name)
+  div(class='build-icons')
+    span
+      +build-icon('design', (name != 'design'))
+      +build-icon('photo', (name != 'photo'))
+      +build-icon('social', (name != 'social'))
+      +build-icon('video', (name != 'video'))
+      +build-icon('web', (name != 'web'))
+      +build-icon('consultation', (name != 'consultation'))
+
+mixin build-icon(name, blurred)
+  if (blurred)
+    div(class='square-card-service-sm' style='background-image: URL(\'../../media/icons/' + name + '-icon.png\'); background-position: center; filter: blur(3px);')
+  else
+    div(class='square-card-service-sm' style='background-image: URL(\'../../media/icons/' + name + '-icon.png\'); background-position: center; filter: none;')
+
 mixin square-card-link(name, icon, _href)
   a(href=_href)
     .square-card-service(style='background-image: url(\"../media/icons/' + icon + '\");')
