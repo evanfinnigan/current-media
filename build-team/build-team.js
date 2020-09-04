@@ -143,7 +143,8 @@ $(document).ready(function() {
 
 function selectService(name, href) {
     window.sessionStorage.setItem('selectedService', name);
-    if (!window.location.href.endsWith(href)) {
+    //hack to get around local paths (../blahblah)
+    if (!window.location.href.endsWith(href.substring(5))) {
         window.location.href = href;
     } else {
         setupPage();
