@@ -1,0 +1,101 @@
+[ 
+  {
+    "name" : "design",
+    "icon" : "design-icon.png",
+    "tier1" : {
+      "name" : "platinum",
+      "description" : "Our platinum design tier includes (insert platinum design features)!",
+      "cost" : 300
+    },
+    "tier2" : {
+      "name" : "gold",
+      "description" : "Our gold design tier features (insert platinum design features).",
+      "cost" : 175
+    },
+    "tier3" : {
+      "name" : "basic",
+      "description" : "Our basic design tier features this, this, and this.",
+      "cost" : 100
+    }
+  },
+  {
+    "name" : "photography",
+    "icon" : "photography-icon.png",
+    "tier1" : {
+      "name" : "platinum",
+      "description" : "Our platinum photography tier features: <br><ul><li>Wedding photography</li><li>Professional portraits</li><li>etc.</li></ul>",
+      "cost" : 500
+    },
+    "tier2" : {
+      "name" : "gold",
+      "description" : "Our gold tier features a bunch of cool stuff.",
+      "cost" : 300
+    },
+    "tier3" : {
+      "name" : "basic",
+      "description" : "Our basic tier features this, this, and this.",
+      "cost" : 150
+    }
+  },
+  {
+    "name" : "social",
+    "icon" : "social-icon.png",
+    "tier1" : {
+      "name" : "platinum",
+      "description" : "Our platinum tier features many wonderful things!",
+      "cost" : 1500
+    },
+    "tier2" : {
+      "name" : "gold",
+      "description" : "Our gold tier features a bunch of cool stuff.",
+      "cost" : 1250
+    },
+    "tier3" : {
+      "name" : "basic",
+      "description" : "Our basic tier features this, this, and this.",
+      "cost" : 1000
+    }
+  },
+  {
+    "name" : "video",
+    "icon" : "video-icon.png",
+    "tier1" : {
+      "name" : "platinum",
+      "description" : "Our platinum tier features many wonderful things!",
+      "cost" : 15000
+    },
+    "tier2" : {
+      "name" : "gold",
+      "description" : "Our gold tier features a bunch of cool stuff.",
+      "cost" : 10000
+    },
+    "tier3" : {
+      "name" : "basic",
+      "description" : "Our basic tier features this, this, and this.",
+      "cost" : 5000
+    }
+  },
+  {
+    "name" : "web",
+    "icon" : "web-icon.png",
+    "tier1" : {
+      "name" : "platinum",
+      "description" : "Our platinum tier features many wonderful things!",
+      "cost" : 1200
+    },
+    "tier2" : {
+      "name" : "gold",
+      "description" : "Our gold tier features a bunch of cool stuff.",
+      "cost" : 800
+    },
+    "tier3" : {
+      "name" : "basic",
+      "description" : "Our basic tier features this, this, and this.",
+      "cost" : 400
+    }
+  },
+  {
+    "name" : "consultation",
+    "icon" : "consultation-icon.png"
+  }
+]
