@@ -17,7 +17,7 @@ var saveData = function() {
 };
 
 var loadContent = function() {
-    $.getJSON("/build-team/build-form.JSON", function(data) {
+    $.getJSON("./build-form.JSON", function(data) {
         content = data;
         console.log('content: ' + content);
         // $.each(data, function(key, val) {
@@ -26,6 +26,17 @@ var loadContent = function() {
         // })
     }).done(function() {
         setupPage();
+    }).fail(function() {
+        $.getJSON("../build-form.JSON", function(data) {
+            content = data;
+            console.log('content: ' + content);
+            // $.each(data, function(key, val) {
+            //     console.log(key + ": " + val);
+            //     content.push({key:value});
+            // })
+        }).done(function() {
+            setupPage();
+        });
     });
 };
 
