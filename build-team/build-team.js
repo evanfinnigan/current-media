@@ -19,24 +19,12 @@ var saveData = function() {
 var loadContent = function() {
     $.getJSON("./build-form.JSON", function(data) {
         content = data;
-        console.log('content: ' + content);
         // $.each(data, function(key, val) {
         //     console.log(key + ": " + val);
         //     content.push({key:value});
         // })
     }).done(function() {
         setupPage();
-    }).fail(function() {
-        $.getJSON("../build-form.JSON", function(data) {
-            content = data;
-            console.log('content: ' + content);
-            // $.each(data, function(key, val) {
-            //     console.log(key + ": " + val);
-            //     content.push({key:value});
-            // })
-        }).done(function() {
-            setupPage();
-        });
     });
 };
 
@@ -155,7 +143,7 @@ $(document).ready(function() {
 function selectService(name, href) {
     window.sessionStorage.setItem('selectedService', name);
     //hack to get around local paths (../blahblah)
-    if (!window.location.href.endsWith(href.substring(5))) {
+    if (href.length <= 5 || !window.location.href.endsWith(href.substring(5))) {
         window.location.href = href;
     } else {
         setupPage();
@@ -218,7 +206,7 @@ function populateServicesList() {
         htmlContent += `<p>${data.desc}</p>`;
         htmlContent += '</div>';
     }
-    htmlContent += '<div><button class="card-footer" onclick="selectService(\"\", \"build-team\")"><h2>Add Another Service</h2></button></div>';
+    htmlContent += '<div><button class="card-footer" onclick="selectService(\'\',\'../\')"><h2>Add Another Service</h2></button></div>';
     $('#service-list').html(htmlContent);
 }
 
