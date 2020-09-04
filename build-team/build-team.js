@@ -285,7 +285,7 @@ function submit() {
 
     if (!isNull) {
         
-        window.location.href="/build-team/service-estimate/";
+        window.location.href="../service-estimate/";
 
         // Need a server url to recieve the data
         // var data = {
