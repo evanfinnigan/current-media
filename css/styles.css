@@ -1,4 +1,11 @@
-/* Universal Default Styles*/
+/* Variable Definitions */
+:root {
+  --dark-blue: #176bc2;
+  --blue: #1e8dff;
+  --light-blue: #58b6ff;
+}
+
+/* Default Styles*/
 body {
   text-transform: uppercase;
   text-align: center;
@@ -21,7 +28,7 @@ h1, h2, h3, h4, h5 {
 .btn {
   display: block;
   color: white;
-  background-color: #55ddff;
+  background-color: var(--light-blue);
   border-radius: 20px;
   padding: 5px 10px 5px 10px;
 }
@@ -46,7 +53,7 @@ h1, h2, h3, h4, h5 {
   display: inline-block;
   width: 250px;
   height: 250px;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   border-radius: 20px;
   background-position: center;
   background-repeat: no-repeat;
@@ -56,12 +63,12 @@ h1, h2, h3, h4, h5 {
 
 .square-card .info {
   position: absolute;
-  top: 5px;
-  left: calc(100% - 35px);
+  top: 20px;
+  left: calc(100% - 50px);
   width: 30px;
   height: 30px;
-  color: white;
-  background-color: grey;
+  color: var(--blue);
+  background-color: white;
   border: none;
   border-radius: 30px;
 }
@@ -69,12 +76,14 @@ h1, h2, h3, h4, h5 {
 /* Build-Team Card */
 
 .card {
+  color: white;
+  background-color: var(--blue);
   text-align: left;
   margin: auto;
   margin-top: 1em;
   max-width: 350px;
-  border-radius: 15px;
-  border: 2px solid black;
+  border-radius: 16px;
+  border: 0px solid var(--blue);
 }
 
 .card button { 
@@ -106,6 +115,10 @@ button:hover {
   margin-left: 16px;
 }
 
+.card-body {
+  color: black;
+}
+
 .card-reciept {
   text-align: left;
   margin: auto;
@@ -118,7 +131,7 @@ button:hover {
 button.card-footer {
   color: white;
   background-color: black;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 16px 16px;
 }
 
 
@@ -139,7 +152,7 @@ button.card-footer {
   display: inline-block;
   width: 120px;
   height: 120px;
-  border: 2px solid black;
+  border: none;
   border-radius: 64px;
   background-position: center;
   background-repeat: no-repeat;
@@ -152,11 +165,11 @@ button.card-footer {
   display: inline-block;
   width: 90px;
   height: 90px;
-  border: 2px solid black;
+  border: none;
   border-radius: 64px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 95px;
+  background-size: 90px;
   margin: 10px;
 }
 
@@ -198,17 +211,18 @@ textarea {
 } */
 
 .progress {
+  background-color: var(--light-blue);
   text-align: center;
   margin: auto;
   width: 250px;
   max-width: 90%;
   height: 20px;
   border-radius: 16px;
-  border: 2px solid black;
+  border: 2px solid var(--light-blue);
 }
 
 .progress-inner {
-  background-color: black;
+  background-color: var(--dark-blue);
   width: calc(100%-10px);
   height: 10px;
   margin: 5px;
@@ -222,23 +236,34 @@ textarea {
 /* Our-Team */
 
 .team-member {
+  color: white;
+  background-color: var(--light-blue);
   display: flex;
-  padding-top: 3em;
-  padding-bottom: 3em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  border-radius: 16px;
+  /* border: 1px solid black; */
 }
+
+/* .team-member .social {
+  filter: invert();
+} */
 
 .team-member-photo {
   display: inline-block;
   width: 250px;
+  height: 315px;
 }
 
 .team-member-photo img {
   width: 250px;
-  height: 300px;
+  min-height: 315px;
   object-fit: cover;
+  border-radius: 16px 0 0 16px;
 }
 
 .team-member-description {
+  width: 100%;
   display: inline-block;
   vertical-align: top;
   padding-left: 15px;
@@ -253,7 +278,9 @@ textarea {
   order: 1;
 }
 
-
+.swap .team-member .team-member-photo img {
+  border-radius: 0 16px 16px 0;
+}
 
 
 
@@ -268,7 +295,7 @@ textarea {
   visibility: hidden;
   width: 100px;
   font-size: 12px;
-  background-color: black;
+  background-color: var(--dark-blue);
   color: #fff;
   text-align: center;
   padding: 5px;
@@ -293,7 +320,7 @@ textarea {
   margin-top: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent black transparent transparent;
+  border-color: transparent var(--dark-blue) transparent transparent;
 }
 
 
@@ -310,18 +337,18 @@ textarea {
   margin-top: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent transparent transparent black;
+  border-color: transparent transparent transparent white;
 }
 
 .info-tooltip-content {
   visibility: hidden;
-  width: 150px;
+  width: 170px;
   font-size: 15px;
-  background-color: black;
+  background-color: white;
   color: black;
   text-align: center;
-  padding: 1px;
-  border: 2px solid black;
+  /* padding: 1px; */
+  border: 2px solid white;
   border-radius: 6px;
   /* box-shadow: black 2px 2px 10px; */
  
@@ -329,12 +356,13 @@ textarea {
   position: absolute;
   z-index: 2;
   top: -20px;
-  left: -175px;
+  left: -195px;
 }
 
 .info-tooltip-header {
-  background-color: lightgrey;
-  color: black;
+  background-color: var(--light-blue);
+  color: white;
+  font-weight: bold;
   padding: 5px;
   border-radius: 3px 3px 0 0;
 }
@@ -391,15 +419,15 @@ nav .links a.icon {
   text-align: center;
   margin-top: 3em;
   padding: 3em;
-  background-color: #eeeeee;
+  background-color: var(--blue);
 }
 
-.footer .social img {
+/* .footer .social img {
   filter: invert();
-}
+} */
 
 .footer, .footer a, .footer a:visited {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -520,11 +548,20 @@ nav .links a.icon {
     width: 100%;
     object-fit: cover;
     object-position: 50% 20%;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .swap .team-member .team-member-photo img {
+    border-radius: 16px 16px 0 0;
   }
 
   .team-member-description {
     width: 100%;
     padding: 0;
+  }
+
+  .team-member-description * {
+    padding: 10px;
   }
 
 } 

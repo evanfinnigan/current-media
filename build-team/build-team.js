@@ -19,10 +19,6 @@ var saveData = function() {
 var loadContent = function() {
     $.getJSON("./build-form.JSON", function(data) {
         content = data;
-        // $.each(data, function(key, val) {
-        //     console.log(key + ": " + val);
-        //     content.push({key:value});
-        // })
     }).done(function() {
         setupPage();
     });
@@ -142,7 +138,6 @@ $(document).ready(function() {
 
 function selectService(name, href) {
     window.sessionStorage.setItem('selectedService', name);
-    //hack to get around local paths (../blahblah)
     if (href.length <= 5 || !window.location.href.endsWith(href.substring(5))) {
         window.location.href = href;
     } else {
@@ -178,14 +173,6 @@ function addServiceHelper(name, tier) {
 
     saveData();
     setupPage();
-
-    // Debug: 
-    // for (var i = 0; i < userData.services.length; i++) {
-    //     if (userData.services[i].service == name) {
-    //         console.log("selected " + userData.services[i].service + " level " + userData.services[i].tier);
-    //         break;
-    //     }
-    // }
 }
 
 function isSelected(name, tier) {
@@ -284,24 +271,17 @@ function submit() {
     }
 
     if (!isNull) {
-        
         window.location.href="../service-estimate/";
-
-        // Need a server url to recieve the data
-        // var data = {
-        //     name: name,
-        //     email: email,
-        //     userData: userData
-        // };
-        // $.ajax({
-        //     type: "POST",
-        //     url: "url",
-        //     data: data,
-        //     success: function() {
-        //         window.location.href="/build-team/service-estimate/";
-        //     }
-        // });
-
+        userData.name = name;
+        userData.email = email;
+        $.ajax({
+            type: "POST",
+            url: "https://currentmedia.herokuapp.com/api/submit-team",
+            data: userData,
+            success: function() {
+                window.location.href="/build-team/service-estimate/";
+            }
+        });
     } else {
         alert('Please fill in the required fields.');
     }
