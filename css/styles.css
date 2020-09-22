@@ -28,9 +28,10 @@ h1, h2, h3, h4, h5 {
 .btn {
   display: block;
   color: white;
-  background-color: var(--light-blue);
-  border-radius: 20px;
-  padding: 5px 10px 5px 10px;
+  font-weight: bold;
+  background-color: var(--blue);
+  border-radius: 100px;
+  padding: 15px 20px 15px 20px;
 }
 
 
@@ -42,10 +43,23 @@ h1, h2, h3, h4, h5 {
 .cards {
   max-width: 600px;
   margin: auto;
+  margin-top: 2em;
+  margin-bottom: 6em;
 }
+
 
 .cards a {
   font-size: 0;
+}
+
+.label {
+  position: absolute;
+  width: 100%;
+  bottom: -22px;
+  left: 0;
+  color: var(--blue);
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .square-card {
@@ -58,7 +72,7 @@ h1, h2, h3, h4, h5 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  margin: 10px;
+  margin: 20px 12px 20px 12px;
 }
 
 .square-card .info {
@@ -76,8 +90,8 @@ h1, h2, h3, h4, h5 {
 /* Build-Team Card */
 
 .card {
-  color: white;
-  background-color: var(--blue);
+  /* color: white;
+  background-color: var(--blue); */
   text-align: left;
   margin: auto;
   margin-top: 1em;
@@ -115,8 +129,15 @@ button:hover {
   margin-left: 16px;
 }
 
+.card-header {
+  color: white;
+  background-color: var(--blue);
+  border-radius: 16px 16px 0 0;
+}
+
 .card-body {
   color: black;
+  background-color: white;
 }
 
 .card-reciept {
@@ -242,6 +263,7 @@ textarea {
   margin-top: 3em;
   margin-bottom: 3em;
   border-radius: 16px;
+  min-height: 315px;
   /* border: 1px solid black; */
 }
 
@@ -252,12 +274,12 @@ textarea {
 .team-member-photo {
   display: inline-block;
   width: 250px;
-  height: 315px;
 }
 
 .team-member-photo img {
+  display: flex;
   width: 250px;
-  min-height: 315px;
+  height: 100%;
   object-fit: cover;
   border-radius: 16px 0 0 16px;
 }
@@ -293,7 +315,7 @@ textarea {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 100px;
+  width: 120px;
   font-size: 12px;
   background-color: var(--dark-blue);
   color: #fff;
@@ -304,7 +326,7 @@ textarea {
   /* Position the tooltip text */
   position: absolute;
   z-index: 1;
-  top: -5px;
+  top: 2px;
   left: 105%; 
 }
 
@@ -546,8 +568,9 @@ nav .links a.icon {
 
   .team-member-photo img {
     width: 100%;
+    max-height: 450px;
     object-fit: cover;
-    object-position: 50% 20%;
+    object-position: 50% 25%;
     border-radius: 16px 16px 0 0;
   }
 

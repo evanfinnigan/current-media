@@ -38,6 +38,9 @@ var setupPage = function() {
 
     var selectedService = window.sessionStorage.getItem('selectedService');
     if (selectedService != null) {
+        $('#tiers').show();
+        $('#none-selected').hide();
+
         $('.square-card-service-sm').each(function() {
             if ($(this).attr("data-service-type") == selectedService) {
                 $(this).css("filter", "none");
@@ -91,7 +94,8 @@ var setupPage = function() {
             }
         });
     } else {
-        console.log("SessionStorage not working?");
+        $('#tiers').hide();
+        $('#none-selected').show();
     }
 
     if ($('#service-list')) {
@@ -106,11 +110,10 @@ var setupPage = function() {
 var setIconColors = function() {
     $('button.square-card-service, button.square-card-service-sm').each(function() {
         var el = $(this);
-        console.log(el);
+        var found = false;
         for (var i = 0; i < userData.services.length; i++) {
-            console.log(userData.services[i].service);
-            console.log(userData.services[i].service + ", " + el.attr('data-service-type'));
             if (userData.services[i].service == el.attr('data-service-type')) {
+                found = true;
                 switch (userData.services[i].tier) {
                     case 1:
                         el.css('background-color', 'cyan');
@@ -125,6 +128,9 @@ var setIconColors = function() {
                         break;
                 }
             } 
+        }
+        if (!found) {
+            el.css('background-color', 'white');
         }
     });
 };
