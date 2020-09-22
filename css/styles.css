@@ -31,7 +31,10 @@ h1, h2, h3, h4, h5 {
   font-weight: bold;
   background-color: var(--blue);
   border-radius: 100px;
+  border: none;
   padding: 15px 20px 15px 20px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .logo {
@@ -201,7 +204,20 @@ button.card-footer {
   margin-bottom: 40px;
 }
 
-
+#your-team-badge {
+  position: absolute;
+  margin-top: -27px;
+  margin-left: 85px;
+  text-align: center;
+  width: 22px; 
+  height: 22px; 
+  color: white; 
+  background-color: red; 
+  font-size: 16px; 
+  border-radius: 100px; 
+  border: 2px solid white;
+  padding: 2px;
+}
 
 
 /* Forms */
@@ -476,6 +492,16 @@ nav .links a.icon {
 
 
 
+/* Build Team Bottom Buttons */
+.bottom-buttons {
+  max-width: 350px; 
+  margin: auto; 
+  height: 150px; 
+  margin-top: 2em;
+}
+
+
+
 
 /* Utility */
 
@@ -527,6 +553,17 @@ nav .links a.icon {
 /*-------------*/
 /* Media Rules */
 /*-------------*/
+
+@media only screen and (max-width: 700px) {
+  nav .links {
+    font-size: 18px;
+  }
+  nav .links a {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
  
 /* Mobile */
 @media only screen and (max-width: 600px) {
