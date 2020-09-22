@@ -52,7 +52,7 @@ var setupPage = function() {
         console.log("Content length: " + content.length);
         $.each(content, function(key, val) {
             if (val.name == selectedService) {
-                $('#service-name').html(val.name);
+                $('#service-name').html(val.displayname);
 
                 $('#tier1-btn').css('border', 'none');
                 $('#tier2-btn').css('border', 'none');

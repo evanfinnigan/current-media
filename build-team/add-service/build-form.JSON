@@ -1,6 +1,7 @@
 [ 
   {
     "name" : "design",
+    "displayname" : "Graphic Design",
     "icon" : "design-icon.png",
     "tier1" : {
       "name" : "platinum",
@@ -20,6 +21,7 @@
   },
   {
     "name" : "photography",
+    "displayname" : "Photography",
     "icon" : "photography-icon.png",
     "tier1" : {
       "name" : "platinum",
@@ -39,6 +41,7 @@
   },
   {
     "name" : "social",
+    "displayname" : "Social Media",
     "icon" : "social-icon.png",
     "tier1" : {
       "name" : "platinum",
@@ -58,6 +61,7 @@
   },
   {
     "name" : "video",
+    "displayname" : "Video Production",
     "icon" : "video-icon.png",
     "tier1" : {
       "name" : "platinum",
@@ -77,6 +81,7 @@
   },
   {
     "name" : "web",
+    "displayname" : "Web Development",
     "icon" : "web-icon.png",
     "tier1" : {
       "name" : "platinum",
@@ -96,6 +101,7 @@
   },
   {
     "name" : "consultation",
+    "displayname" : "Consultation",
     "icon" : "consultation-icon.png"
   }
 ]

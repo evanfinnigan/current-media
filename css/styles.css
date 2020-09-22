@@ -34,7 +34,12 @@ h1, h2, h3, h4, h5 {
   padding: 15px 20px 15px 20px;
 }
 
-
+.logo {
+  max-width: 900px;
+  width: 100%;
+  max-height: 300px;
+  object-fit: scale-down;
+}
 
 
 
@@ -55,10 +60,10 @@ h1, h2, h3, h4, h5 {
 .label {
   position: absolute;
   width: 100%;
-  bottom: -22px;
+  top: calc(100% + 5px);
   left: 0;
   color: var(--blue);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -179,6 +184,7 @@ button.card-footer {
   background-repeat: no-repeat;
   background-size: 128px;
   margin: 10px;
+  margin-bottom: 60px;
 }
 
 .square-card-service-sm {
@@ -192,6 +198,7 @@ button.card-footer {
   background-repeat: no-repeat;
   background-size: 90px;
   margin: 10px;
+  margin-bottom: 40px;
 }
 
 
@@ -412,7 +419,20 @@ textarea {
 
 nav .links {
   color: black;
-  font-weight: bolder;
+  border-radius: 0px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+nav .links a {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+nav .links a:hover {
+  color: white;
+  background-color: var(--blue);
+  border-radius: 30px;
 }
 
 .link-area a {
@@ -422,9 +442,9 @@ nav .links {
   padding-right: 10px;
 }
 
-nav .links .link-area a:visited {
+/* nav .links .link-area a:visited {
   color: black;
-}
+} */
 
 nav .links a.icon {
   display: none;
