@@ -5,6 +5,7 @@ var userData = {services:[]};
 var loadData = function() {
     var userDataStr = window.localStorage.getItem('current-media-data');
     if (userDataStr != null) {
+        console.log("Loading user data: " + userDataStr);
         userData = JSON.parse(userDataStr);
     } else {
         console.log("No local data yet.");
@@ -137,6 +138,9 @@ var setIconColors = function() {
 
 $(document).ready(function() {
     loadData();
+    for(let i = 0; i < userData.services.length; i++) {
+        console.log("service: " + userData.services[i].service + ", " + "tier: " + userData.services[i].tier);
+    }
     loadContent();
     setIconColors();
 });
@@ -277,15 +281,22 @@ function submit() {
     }
 
     if (!isNull) {
-        window.location.href="../service-estimate/";
         userData.name = name;
         userData.email = email;
+
         $.ajax({
             type: "POST",
-            url: "https://currentmedia.herokuapp.com/api/submit-team",
-            data: userData,
+            crossDomain: true,
+            url: "http://127.0.0.1:3000/api/submit-team",
+            // url: "https://currentmedia.herokuapp.com/api/submit-team",
+            dataType: "json",
+            data: {datastr: JSON.stringify(userData)},
             success: function() {
-                window.location.href="/build-team/service-estimate/";
+                window.location.href="../service-estimate/";
+            },
+            error: function(req, status, error) {
+                console.log(status);
+                console.log(error);
             }
         });
     } else {
