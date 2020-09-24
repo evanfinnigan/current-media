@@ -291,12 +291,14 @@ function submit() {
             url: "https://currentmedia.herokuapp.com/api/submit-team",
             dataType: "json",
             data: {datastr: JSON.stringify(userData)},
-            success: function() {
-                window.location.href="../service-estimate/";
-            },
             error: function(req, status, error) {
                 console.log(status);
                 console.log(error);
+            }
+        })
+        .done(function(response) {
+            if (response.msg === true) {
+                window.location.href="../service-estimate/";
             }
         });
     } else {
