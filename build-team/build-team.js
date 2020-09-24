@@ -287,8 +287,8 @@ function submit() {
         $.ajax({
             type: "POST",
             crossDomain: true,
-            url: "http://127.0.0.1:3000/api/submit-team",
-            // url: "https://currentmedia.herokuapp.com/api/submit-team",
+            // url: "http://127.0.0.1:3000/api/submit-team",
+            url: "https://currentmedia.herokuapp.com/api/submit-team",
             dataType: "json",
             data: {datastr: JSON.stringify(userData)},
             success: function() {
