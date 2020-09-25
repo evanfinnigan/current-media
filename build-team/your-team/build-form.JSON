@@ -20,7 +20,7 @@
     }
   },
   {
-    "name" : "photography",
+    "name" : "photo",
     "displayname" : "Photography",
     "icon" : "photography-icon.png",
     "tier1" : {

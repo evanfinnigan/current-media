@@ -297,7 +297,7 @@ function submit() {
             }
         })
         .done(function(response) {
-            if (response.msg === true) {
+            if (response.msg == true) {
                 window.location.href="../service-estimate/";
             }
         });
