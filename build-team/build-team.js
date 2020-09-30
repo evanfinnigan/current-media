@@ -223,6 +223,15 @@ function populateServiceEstimate() {
     $('#service-reciept').html(htmlContent);
 }
 
+function getServiceEstimate() {
+    var estimate = 0;
+    for (var i = 0; i < userData.services.length; i++) {
+        var data = getContent(userData.services[i].service, userData.services[i].tier);
+        estimate += data.cost;
+    }
+    return estimate;
+}
+
 function getContent(name, tier) {
     console.log('get content: ' + name + ', ' + tier)
     var retData = {
@@ -283,6 +292,7 @@ function submit() {
     if (!isNull) {
         userData.name = name;
         userData.email = email;
+        userData.serviceEstimate = getServiceEstimate();
 
         $.ajax({
             type: "POST",
