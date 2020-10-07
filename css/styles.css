@@ -546,6 +546,10 @@ nav .links a.icon {
   text-transform: lowercase;
 }
 
+.ib {
+  display: inline-block;
+}
+
 
 
 
