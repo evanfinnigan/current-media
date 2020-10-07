@@ -9,6 +9,7 @@ html(lang='en')
   
   body
     header
+      +logo('.')
       +nav('.')
 
     main
@@ -19,9 +20,7 @@ html(lang='en')
             | Free Consultation 
             span.tooltiptext Get a quick quote today!
         br
-        br
-        br
-        br
+        h1(style="margin-top: 3em;") Build your Team
         a(href='./build-team' ) 
           .btn.tooltip
             | Start Building
@@ -34,9 +33,9 @@ html(lang='en')
                 i.fa.fa-info
                 .info-tooltip
                   .info-tooltip-content
-                    .info-tooltip-header Non-profit / Startup
-                    .info-tooltip-body Non-profit? blah blah blah blah blah blah!
-
+                    .info-tooltip-header Non-profit
+                    .info-tooltip-body Non-Profit Organization? We'd like to help give back, so click here to build your team as a non-profit and we'll contact you about discounted pricing options.
+              span.label Non-Profits &amp; Startups
           a(href='./build-team')
             // :)
             .square-card(style='background-image: url("./media/icons/individual-business.png");')
@@ -45,12 +44,14 @@ html(lang='en')
                 .info-tooltip
                   .info-tooltip-content
                     .info-tooltip-header Individual
-                    .info-tooltip-body Individual business? Let us help you get your brand off your feet!
+                    .info-tooltip-body Individual business? Let us help you get your brand off your feet! Choose this option to build a team tailored to your needs &amp; budget.
+              span.label Individual Businesses
           a(href='./build-team')
             // :)
             .square-card(style='background-image: url("./media/icons/corporate-commercial.png");')
+              span.label Commercial Projects
           a(href='./build-team') 
             // :)
             .square-card(style='background-image: url("./media/icons/live-events.png");')
-        
+              span.label Live Events
       +footer('.')

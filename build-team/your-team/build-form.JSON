@@ -1,25 +1,27 @@
 [ 
   {
     "name" : "design",
+    "displayname" : "Graphic Design",
     "icon" : "design-icon.png",
     "tier1" : {
       "name" : "platinum",
-      "description" : "Our platinum design tier includes (insert platinum design features)!",
+      "description" : "Our Tidal Wave Graphic Design Tier Offers Full Branding including Logo Concepting, Logo Creation, Branding Guidelines Creation and Integration into any website/Social Media",
       "cost" : 300
     },
     "tier2" : {
       "name" : "gold",
-      "description" : "Our gold design tier features (insert platinum design features).",
+      "description" : "Our Rogue Wave Graphic Design Tier Offers Logo Concepting, Logo Creation and Branding Guidelines Creation",
       "cost" : 175
     },
     "tier3" : {
       "name" : "basic",
-      "description" : "Our basic design tier features this, this, and this.",
+      "description" : "Our Surface Wave Graphic Design Tier Offers Logo Concepting",
       "cost" : 100
     }
   },
   {
-    "name" : "photography",
+    "name" : "photo",
+    "displayname" : "Photography",
     "icon" : "photography-icon.png",
     "tier1" : {
       "name" : "platinum",
@@ -39,63 +41,67 @@
   },
   {
     "name" : "social",
+    "displayname" : "Social Media",
     "icon" : "social-icon.png",
     "tier1" : {
       "name" : "platinum",
-      "description" : "Our platinum tier features many wonderful things!",
+      "description" : "Our Tidal Wave Social Media Tier Offers the ability to have our Social Strategy Experts get hands on, creating and implementing a multi stage Social Strategy to improve your reach and engagement with your target market",
       "cost" : 1500
     },
     "tier2" : {
       "name" : "gold",
-      "description" : "Our gold tier features a bunch of cool stuff.",
+      "description" : "Our Rogue Wave Social Media Tier Offers the creation of a Social Strategy Plan where one of our experts creates a Social Schedule and helps you integrate it into your business",
       "cost" : 1250
     },
     "tier3" : {
       "name" : "basic",
-      "description" : "Our basic tier features this, this, and this.",
+      "description" : "Our Surface Wave Social Media Tier Offers a Social Strategy session with one of our experts in the field of Social Content, Brand Integration and Online Prescence",
       "cost" : 1000
     }
   },
   {
     "name" : "video",
+    "displayname" : "Video Production",
     "icon" : "video-icon.png",
     "tier1" : {
       "name" : "platinum",
-      "description" : "Our platinum tier features many wonderful things!",
+      "description" : "Our Tidal Wave Video Tier Offers Professional Level Commercial Production in which we Concept, Pre-Produce, Build a team, Shoot, Edit and Deliver. Shoot time ranges and Delivery can be expedited.",
       "cost" : 15000
     },
     "tier2" : {
       "name" : "gold",
-      "description" : "Our gold tier features a bunch of cool stuff.",
+      "description" : "Our Rogue Wave Video Tier Offers Production on a Concept we develop with you, we Pre-Produce, Shoot, Edit and Deliver. Usually 1-2 Day Shoot - 1 Week Delivery",
       "cost" : 10000
     },
     "tier3" : {
       "name" : "basic",
-      "description" : "Our basic tier features this, this, and this.",
+      "description" : "Our Surface Wave Video Tier Offers Production on an Concept you have come up with, in which we shoot, edit and Deliver. Usually 1 day shoot - 5 Day Delivery",
       "cost" : 5000
     }
   },
   {
     "name" : "web",
+    "displayname" : "Web Development",
     "icon" : "web-icon.png",
     "tier1" : {
       "name" : "platinum",
-      "description" : "Our platinum tier features many wonderful things!",
+      "description" : "Our Tidal Wave Web Development Tier Offers The Best of Both worlds as our team of professional designers work with our developers to design and implement a Custom Website for your business and work directly with you to make sure your website has all the functionality and appeal you need to stand out in your industry",
       "cost" : 1200
     },
     "tier2" : {
       "name" : "gold",
-      "description" : "Our gold tier features a bunch of cool stuff.",
+      "description" : "Our Rogue Wave Web Development Tier Offers Either Design Concepting and Creation to be integrated into your website or a Custom Website built around designs you have already created",
       "cost" : 800
     },
     "tier3" : {
       "name" : "basic",
-      "description" : "Our basic tier features this, this, and this.",
+      "description" : "Our Surface Wave Web Development Tier Offers Either a basic design concepting session for your company website or a modular website build of a design you have already created",
       "cost" : 400
     }
   },
   {
     "name" : "consultation",
+    "displayname" : "Consultation",
     "icon" : "consultation-icon.png"
   }
 ]

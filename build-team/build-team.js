@@ -5,6 +5,7 @@ var userData = {services:[]};
 var loadData = function() {
     var userDataStr = window.localStorage.getItem('current-media-data');
     if (userDataStr != null) {
+        console.log("Loading user data: " + userDataStr);
         userData = JSON.parse(userDataStr);
     } else {
         console.log("No local data yet.");
@@ -38,6 +39,9 @@ var setupPage = function() {
 
     var selectedService = window.sessionStorage.getItem('selectedService');
     if (selectedService != null) {
+        $('#tiers').show();
+        $('#none-selected').hide();
+
         $('.square-card-service-sm').each(function() {
             if ($(this).attr("data-service-type") == selectedService) {
                 $(this).css("filter", "none");
@@ -49,7 +53,7 @@ var setupPage = function() {
         console.log("Content length: " + content.length);
         $.each(content, function(key, val) {
             if (val.name == selectedService) {
-                $('#service-name').html(val.name);
+                $('#service-name').html(val.displayname);
 
                 $('#tier1-btn').css('border', 'none');
                 $('#tier2-btn').css('border', 'none');
@@ -91,7 +95,8 @@ var setupPage = function() {
             }
         });
     } else {
-        console.log("SessionStorage not working?");
+        $('#tiers').hide();
+        $('#none-selected').show();
     }
 
     if ($('#service-list')) {
@@ -106,11 +111,10 @@ var setupPage = function() {
 var setIconColors = function() {
     $('button.square-card-service, button.square-card-service-sm').each(function() {
         var el = $(this);
-        console.log(el);
+        var found = false;
         for (var i = 0; i < userData.services.length; i++) {
-            console.log(userData.services[i].service);
-            console.log(userData.services[i].service + ", " + el.attr('data-service-type'));
             if (userData.services[i].service == el.attr('data-service-type')) {
+                found = true;
                 switch (userData.services[i].tier) {
                     case 1:
                         el.css('background-color', 'cyan');
@@ -126,11 +130,17 @@ var setIconColors = function() {
                 }
             } 
         }
+        if (!found) {
+            el.css('background-color', 'white');
+        }
     });
 };
 
 $(document).ready(function() {
     loadData();
+    for(let i = 0; i < userData.services.length; i++) {
+        console.log("service: " + userData.services[i].service + ", " + "tier: " + userData.services[i].tier);
+    }
     loadContent();
     setIconColors();
 });
@@ -213,6 +223,15 @@ function populateServiceEstimate() {
     $('#service-reciept').html(htmlContent);
 }
 
+function getServiceEstimate() {
+    var estimate = 0;
+    for (var i = 0; i < userData.services.length; i++) {
+        var data = getContent(userData.services[i].service, userData.services[i].tier);
+        estimate += data.cost;
+    }
+    return estimate;
+}
+
 function getContent(name, tier) {
     console.log('get content: ' + name + ', ' + tier)
     var retData = {
@@ -271,15 +290,25 @@ function submit() {
     }
 
     if (!isNull) {
-        window.location.href="../service-estimate/";
         userData.name = name;
         userData.email = email;
+        userData.serviceEstimate = getServiceEstimate();
+
         $.ajax({
             type: "POST",
+            crossDomain: true,
+            // url: "http://127.0.0.1:3000/api/submit-team",
             url: "https://currentmedia.herokuapp.com/api/submit-team",
-            data: userData,
-            success: function() {
-                window.location.href="/build-team/service-estimate/";
+            dataType: "json",
+            data: {datastr: JSON.stringify(userData)},
+            error: function(req, status, error) {
+                console.log(status);
+                console.log(error);
+            }
+        })
+        .done(function(response) {
+            if (response.msg == true) {
+                window.location.href="../service-estimate/";
             }
         });
     } else {

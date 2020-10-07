@@ -5,14 +5,17 @@ mixin nav(path)
         a.icon(href='javascript:void(0);' onclick='navDropDown()') ☰
         .link-area
           a(href=path + '/') Home
-          span.nomobile |
+          //- span.nomobile |
           a(href=path + '/services/') Services
-          span.nomobile |
+          //- span.nomobile |
           a(href=path + '/build-team/') Build Team
-          span.nomobile |
+          //- span.nomobile |
           a(href=path + '/our-team/') Our Team
-          span.nomobile |
+          //- span.nomobile |
           a(href=path + '/contact/') Contact
+
+mixin logo(path)
+  img.logo(src=path + '/media/images/current-word-logo-cropped.png')
       
 mixin meta(path)
   link(rel='stylesheet' type='text/css' href=path+'/css/styles.css')
@@ -25,28 +28,14 @@ mixin progress(number, max)
       .progress-inner(style="width: calc(" + 100*number/max + "% - 10px);")
         // :)
 
-//- mixin build-icons(name)
-//-   div(class='build-icons')
-//-     span
-//-       +build-icon('design', (name != 'design'))
-//-       +build-icon('photo', (name != 'photo'))
-//-       +build-icon('social', (name != 'social'))
-//-       +build-icon('video', (name != 'video'))
-//-       +build-icon('web', (name != 'web'))
-//-       +build-icon('consultation', (name != 'consultation'))
-
-//- mixin build-icon(name, blurred)
-//-   if (blurred)
-//-     div(class='square-card-service-sm' style='background-image: URL(\'../../media/icons/' + name + '-icon.png\'); background-position: center; filter: blur(3px);' data-service-type=name)
-//-   else
-//-     div(class='square-card-service-sm' style='background-image: URL(\'../../media/icons/' + name + '-icon.png\'); background-position: center; filter: none;' data-service-type=name)
-
-mixin square-card-link(name, icon, _href)
+mixin square-card-link(name, icon, _href, displayname="")
   button.square-card-service(onclick="selectService('" + name + "','" + _href + "')" style='background-color: white; background-image: url(\"../media/icons/' + icon + '\");' data-service-type=name)
+    .label #{displayname}
     //- div( data-service-type=name)
 
-mixin square-card-link-sm(name, icon, _href)
+mixin square-card-link-sm(name, icon, _href, displayname="")
   button.square-card-service-sm(onclick="selectService('" + name + "','" + _href + "')" style='background-color: white; background-image: url(\"../../media/icons/' + icon + '\");' data-service-type=name)
+    .label #{displayname}
     //- .square-card-service-sm(style='background-image: url(\"/media/icons/' + icon + '\");' data-service-type=name)
 
 mixin footer(path)

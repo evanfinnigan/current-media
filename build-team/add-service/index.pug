@@ -15,16 +15,19 @@ html(lang='en')
     main
       .squeeze.centered
         h1 Build Your Team
-        br
-        br
         div
-          +square-card-link-sm('design', 'design-icon.png', '../add-service/')
-          +square-card-link-sm('video', 'video-icon.png', '../add-service/')
-          +square-card-link-sm('social', 'social-icon.png', '../add-service/')
-          +square-card-link-sm('web', 'web-icon.png', '../add-service/')
-          +square-card-link-sm('photography', 'photo-icon.png', '../add-service/')
+          +square-card-link-sm('design', 'design-icon.png', '../add-service/', 'Graphic Design')
+          +square-card-link-sm('video', 'video-icon.png', '../add-service/', 'Video Production')
+          +square-card-link-sm('social', 'social-icon.png', '../add-service/', 'Social Media')
+          +square-card-link-sm('web', 'web-icon.png', '../add-service/', 'Web Development')
+          +square-card-link-sm('photo', 'photo-icon.png', '../add-service/', 'Photography')
           //- +square-card-link-sm('consultation', 'consultation-icon.png', '/free-consultation')
+        
+        br
+        br
         +progress(1,3)
+        br
+        br
         
         // Put a card here:
         // /-----------------------------\
@@ -37,7 +40,7 @@ html(lang='en')
         // |      Service                |
         // \-----------------------------/
 
-        div(class='card')
+        div#tiers(class='card' hidden)
           div(class='card-header')
             //icon img() ?
             h2#service-name 
@@ -54,17 +57,19 @@ html(lang='en')
           button(class='card-footer' onclick='selectService("", "../")')
             // img plus icon
             h2 Add Another Service
-            
+        
+        #none-selected(hidden)
+          h1 Choose a service above.
 
         // /---------------\   /---------\
         // | Your Team (1) |   | Contact |
         // \---------------/   \---------/
 
-        div(style='max-width: 350px; margin: auto; height: 150px; margin-top: 2em;')
-          button(onclick='window.location.href="../your-team/"' style='display: inline-block; border-radius: 10px; border: 2px solid black; margin: 10px; padding: 10px; max-height: 50px;')
-            div#your-team-badge(style='margin-right: -20px; margin-left: auto; margin-top: -22px; width: 20px; height: 20px; color: white; background-color: red; font-size: 12px; border-radius: 15px; padding: 2px;')
+        .bottom-buttons
+          button.btn(onclick='window.location.href="../your-team/"' style='display: inline-block;')
+            #your-team-badge
             h3(style='margin-top: 0; margin-bottom: 0;') Your Team
-          button(onclick='window.location.href="../../contact/"' style='display: inline-block; border-radius: 10px; border: 2px solid black; margin: 10px; padding: 10px; max-height: 50px;')
+          button.btn(onclick='window.location.href="../../contact/"' style='display: inline-block;')
             h3(style='margin-top: 0; margin-bottom: 0;') Contact
         
       +footer('../..')
