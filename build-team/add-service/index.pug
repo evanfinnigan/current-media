@@ -45,14 +45,23 @@ html(lang='en')
             //icon img() ?
             h2#service-name 
           button#tier1-btn(class='card-body platinum' onclick='addService(this, 1)')
-            h2#tier1-name 
-            p#tier1-desc 
+            div
+              img.ib(src='../media/icons/tidal-wave-icon.png' style="max-width: 24px; max-height: 24px; margin-right: 1em;")
+              h2.ib#tier1-name 
+            div
+              p#tier1-desc 
           button#tier2-btn(class='card-body gold' onclick='addService(this, 2)')
-            h2#tier2-name 
-            p#tier2-desc 
+            div
+              img.ib(src='../media/icons/rogue-wave-icon.png' style="max-width: 24px; max-height: 24px; margin-right: 1em;")
+              h2#tier2-name 
+            div
+              p#tier2-desc 
           button#tier3-btn(class='card-body silver' onclick='addService(this, 3)')
-            h2#tier3-name 
-            p#tier3-desc 
+            div
+              img.ib(src='../media/icons/surface-wave-icon.png' style="max-width: 24px; max-height: 24px; margin-right: 1em;")
+              h2#tier3-name 
+            div
+              p#tier3-desc 
           //- Hover on this for info box?
           button(class='card-footer' onclick='selectService("", "../")')
             // img plus icon
