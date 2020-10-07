@@ -82,15 +82,15 @@ var setupPage = function() {
                 } 
 
                 $('#tier1-btn').attr('data-service-name', val.name);
-                $('#tier1-name').html(val.tier1.name);
+                $('#tier1-name').html(val.tier1.displayname);
                 $('#tier1-desc').html(val.tier1.description);
                 
                 $('#tier2-btn').attr('data-service-name', val.name);
-                $('#tier2-name').html(val.tier2.name);
+                $('#tier2-name').html(val.tier2.displayname);
                 $('#tier2-desc').html(val.tier2.description);
 
                 $('#tier3-btn').attr('data-service-name', val.name);
-                $('#tier3-name').html(val.tier3.name);
+                $('#tier3-name').html(val.tier3.displayname);
                 $('#tier3-desc').html(val.tier3.description);
             }
         });
